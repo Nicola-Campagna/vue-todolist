@@ -34,9 +34,10 @@
         <div class="container">
             <!-- INPUT BUTTON -->
             <div class="input-group input-group-lg my-3">
-                <input type="text" class="form-control" placeholder="New Task" aria-label="Recipient's username"
-                    aria-describedby="button-addon2">
-                <button class="btn btn-outline-primary" type="button" id="button-addon2">Add Task</button>
+                <input v-model="newTask" type="text" class="form-control" placeholder="New Task"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button @click="addTask()" class="btn btn-outline-primary" type="button" id="button-addon2">Add
+                    Task</button>
             </div>
 
             <!-- LIST ITEMS -->

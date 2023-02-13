@@ -35,6 +35,8 @@ const settVue = Vue.createApp({
                     false,
                     false,
                 ],
+
+                newTask: "",
             },
 
 
@@ -44,14 +46,20 @@ const settVue = Vue.createApp({
     },
 
     methods: {
+        // task completata
         checkTask(i) {
             this.todo.done = true;
             console.log("task completa" + (i + 1))
 
         },
+        // rimuovi task
         removeTask(i) {
             this.todo.tasks.splice(i, 1);
             console.log("cliccato la task" + (i + 1))
+        },
+        // aggiungi task
+        addTask() {
+            this.todo.tasks.push(this.newTask);
         }
 
     }
