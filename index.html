@@ -42,26 +42,17 @@
             <!-- LIST ITEMS -->
             <h2>TASK:</h2>
             <ul class="list-group">
-                <li class="list-group-item d-flex align-items-center">
-                    List Item
-                    <span class="badge bg-primary rounded-pill ms-auto">14</span>
+                <li v-for="(task,index) in todo.tasks" class="list-group-item d-flex align-items-center">
+                    {{task}}
+
+                    <!-- check task done -->
+                    <input @click="checkTask(index)" class=" form-check-input ms-auto" type="checkbox" value=""
+                        id="firstCheckbox">
+
+                    <!-- croce per rimuovere la task -->
+                    <span @click="removeTask(index)" class="badge bg-primary rounded-pill ms-auto">X</span>
                 </li>
-                <li class="list-group-item">
-                    List Item
-                    <span class="badge bg-primary rounded-pill ms-auto">14</span>
-                </li>
-                <li class="list-group-item">
-                    List Item
-                    <span class="badge bg-primary rounded-pill ms-auto">14</span>
-                </li>
-                <li class="list-group-item">
-                    List Item
-                    <span class="badge bg-primary rounded-pill ms-auto">14</span>
-                </li>
-                <li class="list-group-item">
-                    List Item
-                    <span class="badge bg-primary rounded-pill ms-auto">14</span>
-                </li>
+
             </ul>
 
         </div>
